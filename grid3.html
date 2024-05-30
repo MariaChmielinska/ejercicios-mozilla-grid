@@ -10,6 +10,12 @@
   <link rel="stylesheet" href="../styles.css">
 
   <style>
+
+    .one { grid-area: one; }
+    .two { grid-area: two; }
+    .three { grid-area: three; }
+    .four { grid-area: four; } 
+
     body {
       background-color: #fff;
       color: #333;
@@ -24,11 +30,16 @@
       border-radius: .5em;
       color: #fff;
       padding: .5em;
+  
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+       'one one one'
+      'two three three' 
+      '. four four';
       gap: 10px;
     }
   </style>
